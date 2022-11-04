@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "../styles/team.module.css";
+import styles from "../styles/Team.module.css";
 import Image from "next/image";
 function About() {
   return (
