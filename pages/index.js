@@ -37,8 +37,8 @@ export default function Home() {
           <p className={styles.weDoPara}>
             If you needs include fresh produce, pharmaceuticals, fresh or frozen
             meats, papers rolls, Automotive or any other dry or Temperature
-            Controlled Freight, We've got you covered. We pride ourselves on
-            competitive and on-time services.
+            Controlled Freight, We&apos;ve got you covered. We pride ourselves
+            on competitive and on-time services.
           </p>
         </div>
       </main>
