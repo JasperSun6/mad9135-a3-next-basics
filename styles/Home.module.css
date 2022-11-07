@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 .container {
     padding: 0 2rem;
+    font-family: 'Archivo', sans-serif;
   }
   
 .title {
@@ -12,7 +12,6 @@
     text-align: center;
     padding: 2rem 0;
     color: rgb(108, 191, 232);
-    font-family: 'Archivo', sans-serif;
   }
 
 .subTitle{
@@ -21,7 +20,6 @@
     padding-top: 1.5rem;
     padding-bottom: 1rem;
     color: #36415D;
-    font-family: 'Archivo';
 }  
 
 .paragraph{
@@ -30,7 +28,6 @@
     text-align: center;
     line-height: 1.8;
     color: #36415D;
-    font-family: 'Poppins', sans-serif;
 }
 
 .weDo{
@@ -38,7 +35,6 @@
     padding-top:1rem;
     padding-bottom: 2rem;
     color: #36415D;
-    font-family: 'Poppins', sans-serif;
 }
 
 .weDoTitle{
@@ -46,7 +42,6 @@
     text-align: center;
     padding: 1rem 0;
     color: #36415D;
-    font-family: 'Archivo';
 }
 
 .weDoPara{

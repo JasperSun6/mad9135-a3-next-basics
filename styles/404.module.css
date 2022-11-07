@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital@1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 .container {
     height: 100vh;
@@ -8,24 +7,22 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Archivo', sans-serif;
 }
 
 .h1 {
     font-size: 4rem;
     color: rgb(108, 191, 232);
-    font-family: 'Archivo', sans-serif;
     margin: 0;
     }
 
 .notFound {
     font-size: 2rem;
     color: rgb(108, 191, 232);
-    font-family: 'Archivo', sans-serif;
 }
 
 .back{
     font-size: 1.25rem;
-    font-family: "Poppins", sans-serif;
 }
 
 .home{ 

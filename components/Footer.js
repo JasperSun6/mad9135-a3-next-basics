@@ -1,7 +1,11 @@
+import styles from "../styles/Footer.module.css";
+
 function Footer() {
   return (
     <footer>
-      <p>© 2022 J&S LOGISTICS. All Rights Reserved.</p>
+      <p className={styles.footer}>
+        © 2022 J&S LOGISTICS. All Rights Reserved.
+      </p>
     </footer>
   );
 }
