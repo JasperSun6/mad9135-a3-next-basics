@@ -7,7 +7,6 @@ export default function Works({ works }) {
       <Head>
         <title>J&S Logistics | Our Work</title>
         <meta name="description" content="J&S Logistics work page" />
-
         <link rel="icon" href="/images/logo.png" />
       </Head>
       <div>
