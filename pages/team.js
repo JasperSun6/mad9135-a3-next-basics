@@ -9,7 +9,7 @@ function About() {
         <meta name="description" content="J&S Logistics team page" />
         <link rel="icon" href="/images/logo.png" />
       </Head>
-      <h1 className={styles.h1}>Our Team!</h1>
+      <h1 className={styles.h1}>Our Team</h1>
     </div>
   );
 }

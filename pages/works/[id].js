@@ -1,14 +1,67 @@
-import { useRouter } from "next/router";
+import Head from "next/head";
+import styles from "../../styles/WorkDetail.module.css";
 
-function User() {
-  const router = useRouter();
-  const { id } = router.query;
-
+export default function WorkDetails({ work }) {
   return (
-    <div>
-      <h1>Welcome to the work {id} page</h1>
+    <div className={styles.container}>
+      <div>
+        <Head>
+          <title>J&S Logistics | {work.name}</title>
+          <meta name="description" content="J&S Logistics work page" />
+          <link rel="icon" href="/images/logo.png" />
+        </Head>
+      </div>
+      <div>
+        <h1 className={styles.h1}>Work Details</h1>
+        <p className={styles.name}>
+          {work.name.charAt(0).toUpperCase() + work.name.slice(1)}
+        </p>
+        <p className={styles.email}>{work.email}</p>
+        <div className={styles.desc}>
+          <p className={styles.descTitle}>Description</p>
+          <p className={styles.body}>
+            {work.body.charAt(0).toUpperCase() + work.body.slice(1)}
+          </p>
+        </div>
+        <a className={styles.back} href={"/works/"}>
+          Back to Works
+        </a>
+      </div>
     </div>
   );
 }
 
-export default User;
+export async function getStaticPaths() {
+  const res = await fetch(
+    "https://jsonplaceholder.typicode.com/comments?_limit=5"
+  );
+  const data = await res.json();
+
+  const paths = data.map((work) => {
+    return {
+      params: { id: work.id.toString() },
+    };
+  });
+
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps(context) {
+  const id = context.params.id;
+  const res = await fetch(
+    `https://jsonplaceholder.typicode.com/comments/${id}`
+  );
+  const data = await res.json();
+
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      work: data,
+    },
+  };
+}

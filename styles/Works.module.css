@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.container {
+    padding: 0 3.5rem;
+  }
+  
+
+.h1{
+    color: rgb(108, 191, 232);
+    text-align: center;
+    font-family: 'Archivo', sans-serif;
+}
+
+.list{
+    list-style-type: none; 
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+}
+
+.listItem{
+    border: 1.5px solid rgb(108, 191, 232);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.prj{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.prjTitle{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.detail{
+    display: flex;
+    justify-content: flex-end;
+    font-style: italic;
+    text-decoration: underline;
+    color: rgb(61, 170, 213);
+}
+
+@media screen and (min-width: 600px) {
+    .container {
+        padding: 0 8rem;
+    }
+
+    .prj{
+        font-size: 1.35rem;
+    }
+    
+    .prjTitle{
+        font-size: 1.15rem;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        padding: 0 12rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container {
+        padding: 0 15rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 0 17rem;
+    }
+
+    .prj{
+        font-size: 1.5rem;
+    }
+    
+    .prjTitle{
+        font-size: 1.3rem;
+    }
+
+    .detail{
+        font-size: 1.15rem;
+    }
+}
