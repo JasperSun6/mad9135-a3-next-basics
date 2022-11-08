@@ -1,9 +1,20 @@
-import React, { createContext, useContext } from "react";
-import { teamList } from "../datasource/data";
+import React, { createContext, useContext, useState, useEffect } from "react";
 
 const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
+  const [teamList, setTeamList] = useState([]);
+
+  async function handleFetch() {
+    const res = await fetch("/api/teamlist");
+    const data = await res.json();
+    setTeamList(data);
+  }
+
+  useEffect(() => {
+    handleFetch();
+  }, []);
+
   return (
     <>
       <GlobalContext.Provider
@@ -19,6 +30,7 @@ const GlobalProvider = ({ children }) => {
 
 function useGlobalContext() {
   const context = useContext(GlobalContext);
+
   if (!context) {
     throw new Error("useGlobalContext must be used within a GlobalProvider");
   }

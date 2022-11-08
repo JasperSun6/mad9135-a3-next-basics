@@ -4,7 +4,6 @@ import { useGlobalContext } from "../context/GlobalData";
 
 function Team() {
   const teamList = useGlobalContext().teamList;
-  console.log(teamList);
   return (
     <div className={styles.container}>
       <Head>
