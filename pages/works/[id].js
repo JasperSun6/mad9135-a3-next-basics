@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../../styles/WorkDetail.module.css";
 
 export default function WorkDetails({ work }) {
@@ -23,9 +24,9 @@ export default function WorkDetails({ work }) {
             {work.body.charAt(0).toUpperCase() + work.body.slice(1)}
           </p>
         </div>
-        <a className={styles.back} href={"/works/"}>
+        <Link className={styles.back} href={"/works/"}>
           Back to Works
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -42,7 +43,6 @@ export async function getStaticPaths() {
       params: { id: work.id.toString() },
     };
   });
-
   return { paths, fallback: false };
 }
 

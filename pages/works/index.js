@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/Works.module.css";
+import Link from "next/link";
 
 export default function Works({ works }) {
   return (
@@ -11,7 +12,6 @@ export default function Works({ works }) {
       </Head>
       <div>
         <h1 className={styles.h1}>Our Work</h1>
-
         <ul className={styles.list}>
           {works.map((work) => (
             <li key={work.id} className={styles.listItem}>
@@ -19,9 +19,9 @@ export default function Works({ works }) {
               <p className={styles.prjTitle}>
                 {work.name.charAt(0).toUpperCase() + work.name.slice(1)}
               </p>
-              <a className={styles.detail} href={"/works/" + work.id}>
+              <Link className={styles.detail} href={"/works/" + work.id}>
                 See Details
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
