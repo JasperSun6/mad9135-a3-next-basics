@@ -19,7 +19,8 @@ function Team() {
             <div className={styles.info}>
               <p className={styles.name}>{member.name}</p>
               <p className={styles.position}>Role: {member.position}</p>
-              <p className={styles.birth}>D.O.B. {member.birth}</p>
+              <p className={styles.birthTitle}>D.O.B.</p>
+              <p className={styles.birth}>{member.birth}</p>
             </div>
           </li>
         ))}
