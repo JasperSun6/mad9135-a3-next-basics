@@ -20,7 +20,8 @@
     border: 1.5px solid rgb(108, 191, 232);
     border-radius: 10px;
     padding: 1rem;
-    margin-bottom: 1rem;
+    max-width: 100%;
+    margin:1rem auto;
 }
 
 .prj{
@@ -42,9 +43,9 @@
 }
 
 @media screen and (min-width: 600px) {
-    .container {
-        padding: 0 8rem;
-    }
+    .listItem{
+        max-width: 60%;
+      }
 
     .prj{
         font-size: 1.35rem;
@@ -56,21 +57,21 @@
 }
 
 @media screen and (min-width: 800px) {
-    .container {
-        padding: 0 12rem;
-    }
+    .listItem{
+        max-width: 55%;
+      }
 }
 
 @media screen and (min-width: 1000px) {
-    .container {
-        padding: 0 15rem;
-    }
+    .listItem{
+        max-width: 50%;
+      }
 }
 
 @media screen and (min-width: 1200px) {
-    .container {
-        padding: 0 17rem;
-    }
+    .listItem{
+        max-width: 40%;
+      }
 
     .prj{
         font-size: 1.5rem;

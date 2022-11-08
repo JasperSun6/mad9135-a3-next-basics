@@ -16,9 +16,11 @@ function Team() {
         {teamList.map((member) => (
           <li key={member.id} className={styles.listItem}>
             <img className={styles.img} src={member.image} alt={member.name} />
-            <p className={styles.name}>{member.name}</p>
-            <p className={styles.position}>Role: {member.position}</p>
-            <p className={styles.birth}>D.O.B. {member.birth}</p>
+            <div className={styles.info}>
+              <p className={styles.name}>{member.name}</p>
+              <p className={styles.position}>Role: {member.position}</p>
+              <p className={styles.birth}>D.O.B. {member.birth}</p>
+            </div>
           </li>
         ))}
       </ul>
