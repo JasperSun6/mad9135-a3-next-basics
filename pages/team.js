@@ -1,5 +1,6 @@
 import Head from "next/head";
 import styles from "../styles/Team.module.css";
+import Image from "next/image";
 import { useGlobalContext } from "../context/GlobalData";
 
 function Team() {
@@ -15,7 +16,13 @@ function Team() {
       <ul className={styles.list}>
         {teamList.map((member) => (
           <li key={member.id} className={styles.listItem}>
-            <img className={styles.img} src={member.image} alt={member.name} />
+            <Image
+              className={styles.img}
+              src={member.image}
+              alt={member.name}
+              width="160"
+              height="192"
+            />
             <div className={styles.info}>
               <p className={styles.name}>{member.name}</p>
               <p className={styles.position}>Role: {member.position}</p>
